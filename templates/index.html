@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="dialog-form" title="Add new task">
+  <form>
+    <fieldset>
+      <label for="source_playlist_id">Source playlist ID <span class="required">*</span></label>
+      <input type="text" name="source_playlist_id" id="source_playlist_id" value="" class="text ui-widget-content ui-corner-all">
+      <label for="dest_playlist_id">Your playlist ID</label>
+      <input type="text" name="dest_playlist_id" id="dest_playlist_id" value="" class="text ui-widget-content ui-corner-all">
+      <!-- label for="password">Password</label>
+      <input type="password" name="password" id="password" value="" class="text ui-widget-content ui-corner-all" -->
+ 
+      <!-- Allow form submission with keyboard without duplicating the dialog button -->
+      <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+    </fieldset>
+  </form>
+  <p class="validateTips">Fields with "<span class="required">*</span>" are required.</p>
+</div>
+      <h3>Active tasks</h3>
+      <div class="rTable" id="tasks_table">Loading ...</div>
+      <br>
+      <a href="#" class="task-button" id="create-task">Create new task</a>
+      <!-- button id="create-task">Create new task</button -->
+{% endblock %}

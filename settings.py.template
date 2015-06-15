@@ -1,0 +1,15 @@
+#
+# YouTube client ID and secret
+# for create your ID's go to https://console.developers.google.com select application and
+# allow YouTube API for this application. Than create new OAuth Client ID and copy this 
+# ClientID and Client secret to this file.
+#
+CLIENT_ID = ''
+CLIENT_SECRET = ''
+
+#
+# Secret string for generate sessions. Fill this string random chars
+#
+SESSION_SECRET = ''
+
+# When you fill all fileds rename this file to "settings.py"

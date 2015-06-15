@@ -1,0 +1,13 @@
+{% if user_snippet %}        <div class="user"><div style="display: table-row;"><div class="user_thumb" style="background: url({{ user_snippet.thumbnails.default.url }}) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;"></div><div class="user_title">{{ user_snippet.title }}</div></div><div class="sub_menu">{% if user %}<div class="sub_menu_item1"><a href="{{ google_logout_url }}">{{ user.nickname() }}</a></div>{% else %}<div class="sub_menu_item1" style="display: none"><a href="{{ google_login_url }}">Login with Google</a></div>{% endif %}<div class="sub_menu_item1"><a href="/youtube_logout">Sign out</a></div></div></div><br>{% endif %}
+<script type="text/javascript">
+  $(document).ready(function() {
+      $(this).find('.user').find(">:first-child").click(function() {
+        var el = $(document).find('.user').find('.sub_menu').find(">:first-child");
+        if (el.css('display') == 'none') {
+          el.css('display', 'block');
+        } else {
+          el.css('display', 'none');
+        }
+      });
+    });
+</script>

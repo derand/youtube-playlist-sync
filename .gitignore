@@ -1,0 +1,6 @@
+
+.DS_Store
+*.pyc
+settings.py
+lib
+
